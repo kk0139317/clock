@@ -2,32 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body{
+  min-height: 100vh;
+}
+.box-shadoe {
+  box-shadow: 
+    0px 0px 50px 5px blue;
+    /* 10px 10px 50px 5px red;  */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.no-transition:focus {
+  transition: none;
+
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Add this in your global CSS file */
+.clock-face {
+  position: relative;
+  background: url('/assets/img/clock.png') ;
+  background-size: 100%;
+  z-index: 1;
+
+}
+
+.hour-hand, .minute-hand, .second-hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 40%;
+  height: 2px;
+  background-color: blue;
+  transform-origin: 0% 0%;
+  transition: transform 0.5s cubic-bezier(0.4, 2.3, 0.3, 1);
+}
+
+.minute-hand {
+  height: 3px;
+  background-color: green;
+}
+
+.second-hand {
+  height: 1px;
+  background-color: red;
 }
