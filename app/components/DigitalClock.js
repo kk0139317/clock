@@ -30,6 +30,7 @@ const DigitalClock = ({ time, setTime, setIsManual }) => {
                 name="hours" 
                 value={time.getHours() }  
                 onChange={onTimeChange} 
+                maxLength={2}
                 className=' bg-transparent text-blue-800 text-4xl w-20 focus:outline-none focus:border-none font-extrabold mx-auto my-auto text-center float-left'
             />
             </div>
@@ -40,6 +41,7 @@ const DigitalClock = ({ time, setTime, setIsManual }) => {
                 name="minutes" 
                 value={time.getMinutes()} 
                 onChange={onTimeChange}
+                maxLength={2}
                 className=' bg-transparent text-blue-800 text-4xl w-20 focus:outline-none focus:border-none font-extrabold mx-auto my-auto text-center' 
             />
             
@@ -51,6 +53,7 @@ const DigitalClock = ({ time, setTime, setIsManual }) => {
                 name="seconds" 
                 value={time.getSeconds()} 
                 onChange={onTimeChange} 
+                maxLength={2}
                 className=' bg-transparent text-blue-800 text-4xl w-20 focus:outline-none focus:border-none font-extrabold mx-auto my-auto text-center'
             />
             </div>
