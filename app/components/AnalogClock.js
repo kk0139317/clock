@@ -5,7 +5,7 @@ const AnalogClock = ({ time, setTime, setIsManual }) => {
     const [handType, setHandType] = useState(null);
 
     // Calculate rotation for hands
-    const hourDegrees = (time.getHours() % 12) / 12 * 360 + (time.getMinutes() / 60) * 30;
+    const hourDegrees = (time.getHours() % 12) / 12 * 270 + (time.getMinutes() / 60) * 30;
     const minuteDegrees = time.getMinutes() / 60 * 360;
     const secondDegrees = time.getSeconds() / 60 * 360;
 
