@@ -50,7 +50,7 @@ const AnalogClock = ({ time, setTime, setIsManual }) => {
     return (
         <main className="flex">
 
-        <div className="mx-auto my-10 rotate-270deg ">
+        <div className="mx-auto my-10 -rotate-90deg ">
             <h1 className='text-white font-extrabold text-4xl text-center -mt-10 mb-10'>
                 Analog Clock
             </h1>
