@@ -70,5 +70,5 @@ input[type="number"] {
 }
 
 .analog-rotate{
-  rotate:90deg;
+  rotate:-90deg;
 }
